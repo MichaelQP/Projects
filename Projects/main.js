@@ -7,7 +7,7 @@ function playRound() {
     const playSelection = playerChoice();
     const computerSelection = computerChoice();
 }
-
+//ok, maybe this isn't working so well. btw this is testing github commits
 function playerChoice() {
     let input = prompt('Type rock, paper, or scissors');
     while(input == null){
