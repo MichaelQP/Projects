@@ -7,19 +7,25 @@ function playRound() {
     const playSelection = playerChoice();
     const computerSelection = computerChoice();
 }
-//added a comment for github testing
+
 function playerChoice() {
     let input = prompt('Type rock, paper, or scissors');
     while(input == null){
         input = prompt('Type rock, paper, or scissors');
     input = input.toLowerCase();
-    let check = validateInput(input)
-    if (check == true) {
-        console.log(input)
+    let check = validateInput(input);
+    while (check == false) {
+        input = prompt(
+            "Type Rock , Paper, or Scissors. Spelling needs to be exact, but capitilization doesn't matter"
+        );
+        input = input.toLowerCase()
+        check = validateInput(input);
     }
+   
+    
     
     }
-    console.log(input);
+    //console.log(input);
 }
 
 function computerChoice() {
